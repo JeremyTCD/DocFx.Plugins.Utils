@@ -1,7 +1,4 @@
 version: '{build}'
-branches:
-  only:
-  - master
 skip_non_tags: true
 image: Visual Studio 2017
 environment:
@@ -12,5 +9,8 @@ build_script:
     dotnet restore
     cd ./src/JeremyTCD.DocFx.Plugins.Utils
     dotnet pack -c release /p:version=$env:APPVEYOR_REPO_TAG_NAME
+deploy_script:
+- ps: |
     nuget setApiKey $env:nuget_key
     nuget push "./bin/release/JeremyTCD.DocFx.Plugins.Utils.$($env:APPVEYOR_REPO_TAG_NAME).nupkg" -Source https://www.nuget.org/api/v2/package
+
