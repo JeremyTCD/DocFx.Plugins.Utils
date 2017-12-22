@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using System;
 
 namespace JeremyTCD.DocFx.Plugins.Utils
 {
@@ -9,7 +10,13 @@ namespace JeremyTCD.DocFx.Plugins.Utils
             HtmlNode snippet = HtmlNode.CreateNode("<article></article>");
             snippet.AppendChildren(article.ChildNodes);
             HtmlNode titleAnchorNode = HtmlNode.CreateNode($"<a href=\"/{href}\"></a>");
+
             HtmlNode titleNode = snippet.SelectSingleNode(".//h1");
+            if (titleNode == null)
+            {
+                throw new InvalidOperationException($"{nameof(SnippetCreator)}: Article {href} has no title (h1 element). A title is required for an article to " +
+                    $"be included in the article list.");
+            }
             titleAnchorNode.InnerHtml = titleNode.InnerText;
             titleNode.RemoveAllChildren();
             titleNode.AppendChild(titleAnchorNode);
