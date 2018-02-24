@@ -14,7 +14,7 @@ namespace JeremyTCD.DocFx.Plugins.Utils
             if (titleNode == null)
             {
                 // Title node is used as link to the article, it is mandatory
-                throw new InvalidOperationException($"{nameof(SnippetCreator)}: Article {href} has no title (jtcd_pageTitle is unspecified). A title is required for an article to " +
+                throw new InvalidOperationException($"{nameof(SnippetCreator)}: Article {href} has no title (mimo_pageTitle is unspecified). A title is required for an article to " +
                     $"be included in the article list.");
             }
             HtmlNode titleAnchorNode = HtmlNode.CreateNode($"<a href=\"/{href}\"></a>");
@@ -35,7 +35,7 @@ namespace JeremyTCD.DocFx.Plugins.Utils
             // Content
             HtmlNode contentNode = article.SelectSingleNode(".//div[contains(@class, 'content')]");
             HtmlNode descriptionNode = contentNode.SelectSingleNode(".//p");
-            if(contentNode != null)
+            if(descriptionNode != null)
             {
                 HtmlNode newContentNode = contentNode.CloneNode(false);
                 newContentNode.AppendChild(descriptionNode.CloneNode(true));
