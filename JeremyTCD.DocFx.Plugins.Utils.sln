@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyTCD.DocFx.Plugins.Utils", "src\JeremyTCD.DocFx.Plugins.Utils\JeremyTCD.DocFx.Plugins.Utils.csproj", "{9E1E411B-1665-44F6-BC6F-0249DF998280}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyTCD.DocFx.Plugins.Utils", "src\Utils\JeremyTCD.DocFx.Plugins.Utils.csproj", "{9E1E411B-1665-44F6-BC6F-0249DF998280}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1E487626-A973-4087-B75C-A2BC0CC15C9B}"
 	ProjectSection(SolutionItems) = preProject
