@@ -23,6 +23,6 @@
 
   <ItemGroup>
     <PackageReference Include="HtmlAgilityPack" Version="1.4.9" />
-    <PackageReference Include="Microsoft.DocAsCode.Plugins" Version="2.39.2" />   
+    <PackageReference Include="Microsoft.DocAsCode.Plugins" Version="2.39.3" />   
   </ItemGroup>
 </Project>
