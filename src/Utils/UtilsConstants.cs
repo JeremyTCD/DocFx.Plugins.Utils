@@ -2,6 +2,6 @@
 {
     public static class UtilsConstants
     {
-        public const string ArticleClass = "jtcd-article";
+        public const string ArticleClass = "main-article";
     }
 }

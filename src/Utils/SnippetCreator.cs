@@ -10,7 +10,7 @@ namespace JeremyTCD.DocFx.Plugins.Utils
             HtmlNode snippet = HtmlNode.CreateNode("<article></article>");
 
             // Title
-            HtmlNode titleNode = article.SelectSingleNode(".//div[contains(@class, 'title')]");
+            HtmlNode titleNode = article.SelectSingleNode(".//h1[contains(@class, 'title')]");
             if (titleNode == null)
             {
                 // Title node is used as link to the article, it is mandatory
